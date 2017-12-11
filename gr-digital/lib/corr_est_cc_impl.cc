@@ -286,7 +286,10 @@ namespace gr {
         nom = d_corr_mag[i-1] + 2*d_corr_mag[i] + 3*d_corr_mag[i+1];
         den = d_corr_mag[i-1] + d_corr_mag[i] + d_corr_mag[i+1];
         double center = nom / den;
-        center = (center - 2.0); // adjust for bias in center of mass calculation
+        center = (center - 2.0); // adjust for bias in center of mass calculation 
+        //TA:这个质量中心计算的结果有什么用？
+        //y轴的坐标选择是1，2，3，算出来的应该是质心在y轴的坐标
+        //减去2,是计算和形心的偏移吗？
 #endif
 
         // Estimated scaling factor for the input stream to normalize
